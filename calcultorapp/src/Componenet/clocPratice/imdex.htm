@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Disply Time On Website</title>
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+.container{
+  width: 100%; 
+   height: 100vh;
+   background:#ffe3e3 ;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   position: relative;
+   /* margin: auto; */
+   
+}
+.container>img{
+    width: 75%;
+  
+    /* height: 720px; */
+}
+.container>h1{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(50%,-50%);
+    color: white;
+    font-size: 90px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.qutes{
+    width: 100%;
+    position:absolute ;
+    text-align: center;
+    bottom: 15%;
+    color:white ;
+    font-size: 20px;
+    font-weight: 500;
+}
+.qutes>h2{
+    margin-top: 10px;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+</style>
+<body>
+    <div class="container">
+        <img   src="https://www.fotolip.com/wp-content/uploads/2016/05/Powerpoint-Template-4.jpg"/>
+        <!-- <img src=""/> -->
+<h1 id="current-time"></h1>
+        <div class="qutes">
+            <P>TODAY 'QOUTES</P>
+            <h2>Lost Time Is Never Found Again</h2>
+        </div>
+    </div>
+
+    <script>
+        setInterval(()=>{
+            let time = document.getElementById("current-time")
+        let d = new Date();
+        time.innerHTML = d.toLocaleTimeString()
+        },1000)
+      
+    </script>
+</body>
+</html>
