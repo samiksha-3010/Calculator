@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify </title>
+    
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: pink;
+    /* background-image: url("https://cdn.pixabay.com/photo/2017/10/25/03/40/guitar-2886886_640.jpg"); */
+    background-size:cover ;
+    background-position: center;
+    position: relative;
+
+
+
+}
+.navbar{
+   width: 88%; 
+   margin: auto;
+   padding: 15px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.navbar>img{
+    width: 100px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #5f5f5f;
+    font-size: 15px;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+.left-col{
+    margin-left: 6%;
+}
+.left-col h1{
+    font-size: 90px;
+    line-height: 110px;
+    float: left;
+    color: white;
+
+}
+.right-col{
+    float: right;
+    margin-right: 6%;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+}
+.right-col>p{
+    font-size: 18px;
+    color: #5f5f5f;
+    font-weight: 400;
+    margin-right: 15px;
+
+
+}
+.right-col>img{
+    width: 80px;
+    cursor: pointer;
+}
+/* .mySong{
+
+} */
+
+</style>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.2vH6Yo1wUtQkcq5hYzzvHgHaEK&pid=Api&rs=1&c=1&qlt=95&w=184&h=103"/>
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">About</a></li>
+                <li> <a href="#">Products</a></li>
+                <li> <a href="#">Specification</a></li>
+                <li> <a href="#"></a>Connect</li>
+            </ul>
+         
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE<br/>REAL<br/>SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Click here to listen</p>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.HcGFr9Qq--0N1PQ1GbbrHgHaHv&pid=Api&rs=1&c=1&qlt=95&w=118&h=123" id="image"/>
+            </div>
+        </div>
+    </div>
+    <audio id="mySong">
+        <source src="https://nzt6ku-a.akamaihd.net/downloads/ringtones/files/mp3/mahiye-jinna-sohna-ringtone-mp3-320k-61071.mp3" type="audio">
+    </audio>
+    <script>
+        var mySong = document.getElementById("mySong")
+        var image = document.getElementById("image")
+        
+        image.onclick = function(){
+            if(mySong.paushed){
+             mySong.play(); 
+             image.src ="https://tse1.mm.bing.net/th?id=OIP.VK9Q1aIJwqjwyaFVJbc0-QHaHa&pid=Api&P=0&h=180"  
+            }else{
+                mySong.paushed();
+                image.src = "https://tse3.mm.bing.net/th?id=OIP.4DiIXLd7dQOt26spkT0bnwHaHa&pid=Api&P=0&h=180"
+            }
+           
+        }
+    </script>
+    
+</body>
+</html>
