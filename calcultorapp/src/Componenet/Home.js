@@ -31,8 +31,7 @@ export const Home = () => {
                 <input type='button' value= "4" onClick={e=>setvalue( value + e.target.value)}/>
                 <input type='button' value= "5" onClick={e=>setvalue( value + e.target.value)}/>
                 <input type='button' value= "6" onClick={e=>setvalue( value + e.target.value)}/>
-                <input type='button' value= "+" onClick={e=>setvalue( value + e.target.value)}/>
-
+                <input type='button' value= "+" onClick={e=>setvalue( value + e.target.value)}/
             </div>
             <div>
                 <input type='button' value= "1" onClick={e=>setvalue( value + e.target.value)}/>
